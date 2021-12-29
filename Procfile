@@ -1,1 +1,1 @@
-web: gunicorn codes.wsgi
+web: gunicorn Noticeboard.wsgi
