@@ -2,7 +2,17 @@
 
 {% block content %}
 <div>
-    {% for post in post_list %}
+    {% for event in event_list %}
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;height: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ event.title }}</h5>
+                <p class="card-text">{{ event.details }}</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </div>
     {% endfor %}
 
 </div>

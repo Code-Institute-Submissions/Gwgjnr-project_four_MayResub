@@ -10,3 +10,12 @@
     line-height: 60px;
     background-color: #FFAA47;
 }
+
+body {
+    background-image: url('https://res.cloudinary.com/djcwwiiid/image/upload/v1640804459/cork-board_jjrwcg.jpg');
+}
+
+.card {
+    margin: 2rem;
+    background-color: #F5F474;
+}
