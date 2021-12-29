@@ -5,4 +5,5 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(Event)
 class PostAdmin(SummernoteModelAdmin):
 
+    prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('details', 'requirements')
