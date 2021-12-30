@@ -16,7 +16,7 @@ class Event(models.Model):
     details = models.TextField()
     requirements = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField(auto_now=True)
+    updated_on = models.DateTimeField()
     status = models.IntegerField(choices=STATUS, default=0)
     signed_up = models.ManyToManyField(
         User, related_name='event_numbers', blank=True)
