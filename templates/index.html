@@ -1,20 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
-    {% for event in event_list %}
-    <div class="col-md-4">
-        <div class="card" style="width: 18rem;height: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{ event.title }}</h5>
-                <p class="card-text">{{ event.details }}</p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
+<div class="container-fluid">
+    <div class="row">
+        {% for event in event_list %}
+        <div class="col-xlg-3">
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="card blue">
+
+                {% elif forloop.counter|divisibleby:3 %}
+                <div class="card pink">
+                    {% else %}
+                    <div class="card yellow">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ event.title }}</h5>
+                            <p class="card-text">{{ event.details }}</p>
+                            <button class="btn btn-outline-success" type="info">Info</button>
+                            <button class="btn btn-outline-success" type="info">Join</button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
+
+
         </div>
-    </div>
-    {% endfor %}
 
-</div>
-
-{%endblock%}
+        {%endblock%}
