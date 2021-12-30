@@ -11,9 +11,9 @@
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    clear: both;
+    position: relative;
+    margin-top: -200px;
     background-color: #FFAA47;
 }
 
