@@ -13,10 +13,11 @@ class Event(models.Model):
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
     summary = models.TextField(blank=True)
-    details = models.TextField()
+    location = models.TextField()
     requirements = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    updated_on = models.DateTimeField()
+    event_start = models.DateTimeField(auto_now_add=True)
+    spots = models.IntegerField()
     status = models.IntegerField(choices=STATUS, default=0)
     signed_up = models.ManyToManyField(
         User, related_name='event_numbers', blank=True)
