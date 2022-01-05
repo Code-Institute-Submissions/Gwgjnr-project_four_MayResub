@@ -1,14 +1,33 @@
 {% extends "base.html" %}
-
 {% block content %}
+{% if not user.is_authenticated %}
+<section>
+    <article id="intro">
+        <h2 id="intro_title">Hello and welcome to Hobby Hub!!</h2>
+        <br>
+        <p class="intro_text">
+            We exist to create opportunities for like minded people in the Galway area to get together so
+            you can
+            have new experiences
+            and meet interesting people who share your passions. Maybe you have a hobby you want to share,
+            why not
+            create a post!
+        </p>
+        <br>
+        <p class="intro_text">
+            Sign up and start exploring all our different options today.
+        </p>
+    </article>
+</section>
+{% endif %}
 <div class="container-fluid">
     <div class="row">
         {% for event in event_list %}
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-            {% if forloop.counter|divisibleby:2 %}
-            <div class="card yellow">
-                {% elif forloop.counter|divisibleby:3 %}
-                <div class="card blue">
+            {% if forloop.counter|divisibleby:3 %}
+            <div class="card blue">
+                {% elif forloop.counter|divisibleby:2 %}
+                <div class="card yellow">
                     {% else %}
                     <div class="card pink">
                         {% endif %}
