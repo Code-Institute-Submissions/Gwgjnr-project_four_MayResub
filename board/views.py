@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Event
+from .forms import EventForm
 
 
 class EventList(generic.ListView):
@@ -8,3 +9,17 @@ class EventList(generic.ListView):
     queryset = Event.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 20
+
+
+class CreateEvent(View):
+
+    def get(self, request, slug, *args, **kwargs):
+
+        return render(
+            request,
+            "event_form.html", 
+            {
+                "event_form": EventForm()
+            }
+        )
+    
