@@ -23,7 +23,7 @@ class CreateEvent(View):
             }
         )
     
-    def post(self, request, slug, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
 
         event_form = EventForm(data=request.POST)
         if event_form.is_valid():
