@@ -32,7 +32,7 @@
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Create Event</a>
+                            <a class="nav-link" href="{% url 'create_event' %}">Create Event</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>

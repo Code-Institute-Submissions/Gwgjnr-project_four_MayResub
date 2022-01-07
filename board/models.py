@@ -16,7 +16,7 @@ class Event(models.Model):
     location = models.TextField()
     requirements = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    event_start = models.DateTimeField(auto_now_add=True)
+    event_start = models.DateTimeField()
     spots = models.IntegerField()
     status = models.IntegerField(choices=STATUS, default=0)
     signed_up = models.ManyToManyField(
