@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from .models import Event
 from .forms import EventForm
@@ -33,5 +33,19 @@ class CreateEvent(View):
             event_form.save()
         else:
             event_form = EventForm()
+
+        return redirect('/')
+
+
+class JoinEvent(View):
+    
+    def post(self, request, slug, *args, **kwargs):
+        event = get_object_or_404(Event, slug=slug)
+        if event.signed_up.filter(id=request.user.id).exists():
+            event.signed_up.remove(request.user)
+            event.spots += 1
+        else:
+            event.signed_up.add(request.user)
+            event.spots -= 1
 
         return redirect('/')
