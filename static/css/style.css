@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Permanent+Marker&family=Ubuntu+Mono&display=swap');
 
-h2 {
+h2, h3, h4, h5 {
     font-family: 'Ubuntu Mono', monospace;
 }
 
@@ -33,7 +33,6 @@ body {
 
 .card {
     margin: 1rem;
-    max-width: 24rem;
 }
 
 .yellow {

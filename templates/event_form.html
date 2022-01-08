@@ -1,15 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
+
 <div class="container">
     <div class="row">
         <div class="col">
-            <form method="post">
-                {% load crispy_forms_tags %}
+            <div class="card yellow">
+                {% if user.is_authenticated %}
+                <form method="post">
+                    {% load crispy_forms_tags %}
 
-                {{ event_form | crispy }}
-                {% csrf_token %}
-                <button type="submit">submit</button>
-            </form>
+                    {{ event_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit">submit</button>
+                </form>
+                {% else %}
+                <p>
+                    Im sorry but you need to log in to create an event.
+                </p>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
