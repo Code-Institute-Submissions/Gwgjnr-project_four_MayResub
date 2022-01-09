@@ -40,7 +40,6 @@ class CreateEvent(View):
 class JoinEvent(View):
     
     def post(self, request, slug, *args, **kwargs):
-        print("POST")
         event = get_object_or_404(Event, slug=slug)
         if request.user in event.signed_up.all():
             event.signed_up.remove(request.user)
@@ -50,4 +49,12 @@ class JoinEvent(View):
             event.signed_up.add(request.user)
             event.spots -= 1
             event.save()
+        return redirect('/')
+
+
+class DeleteEvent(View):
+    
+    def post(self, request, slug, *args, **kwargs):
+        event = get_object_or_404(Event, slug=slug)
+        event.delete()
         return redirect('/')
