@@ -1,11 +1,17 @@
+/* Import url for google fonts Ubuntu Mono and Caveat */
+
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Permanent+Marker&family=Ubuntu+Mono&display=swap');
+
+/* Link Cloudinary hosting site for background image */
+
+body {
+    background-image: url('https://res.cloudinary.com/djcwwiiid/image/upload/v1640804459/cork-board_jjrwcg.jpg');
+}
+
+/* Styling to set fonts throughout website */
 
 h2, h3, h4, h5 {
     font-family: 'Ubuntu Mono', monospace;
-}
-
-.social-media a {
-    color: azure;
 }
 
 main p {
@@ -23,6 +29,8 @@ main p {
     font-weight: 900;
 }
 
+/* Styling for footer to hold an bottom of page and style icons */
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -31,9 +39,20 @@ main p {
     background-color: #FFAA47;
 }
 
-body {
-    background-image: url('https://res.cloudinary.com/djcwwiiid/image/upload/v1640804459/cork-board_jjrwcg.jpg');
+#page-container {
+    position: relative;
+    min-height: 100vh;
 }
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+.social-media a {
+    color: azure;
+}
+
+/* Styling for cards on index.html */
 
 .card {
     margin: 1rem;
@@ -52,14 +71,15 @@ body {
     background-color: #ff65a3;
 }
 
+.join_button {
+    display: inline;
+}
+
+/* Styling for intro section on index.html */
+
 #intro {
     background-color: azure;
     padding: 2rem;
-}
-
-#intro_title {
-    font-family: '
-
 }
 
 .intro_text {
@@ -67,18 +87,7 @@ body {
     font-size: x-large;
 }
 
-#page-container {
-    position: relative;
-    min-height: 100vh;
-}
-
-#content-wrap {
-    padding-bottom: 2.5rem;
-}
-
-.join_button {
-    display: inline;
-}
+/* Styling for intro section on index.html */
 
 .form-group {
     padding: 0.2rem;
