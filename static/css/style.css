@@ -75,3 +75,12 @@ body {
 .join_button {
     display: inline;
 }
+
+.form-group {
+    padding: 0.2rem;
+}
+
+#form-button {
+    float: right;
+    margin-right: 1rem;
+}

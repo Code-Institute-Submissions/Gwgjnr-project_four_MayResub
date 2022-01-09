@@ -1,25 +1,41 @@
 {% extends "base.html" %}
 {% block content %}
-
+{% load crispy_forms_tags %}
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="card yellow">
-                {% if user.is_authenticated %}
-                <form method="post">
-                    {% load crispy_forms_tags %}
-
-                    {{ event_form | crispy }}
-                    {% csrf_token %}
-                    <button type="submit">submit</button>
-                </form>
-                {% else %}
-                <p>
-                    Im sorry but you need to log in to create an event.
-                </p>
-                {% endif %}
+    <div class="card yellow">
+        {% if user.is_authenticated %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-6 mb-0">
+                    {{ event_form.title | as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6 mb-0">
+                    {{ event_form.slug | as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6 mb-0">
+                    {{ event_form.summary | as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6 mb-0">
+                    {{ event_form.requirements | as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6 mb-0">
+                    {{ event_form.location | as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6 mb-0">
+                    {{ event_form.event_start | as_crispy_field }}
+                    {{ event_form.spots | as_crispy_field }}
+                </div>
+                <div class="form-group col-12">
+                    <button id="form-button" class="btn btn-success" type="submit">submit</button>
+                </div>
             </div>
-        </div>
+        </form>
+        {% else %}
+        <p>
+            Im sorry but you need to log in to create an event.
+        </p>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
