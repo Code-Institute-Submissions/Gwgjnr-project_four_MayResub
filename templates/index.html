@@ -77,8 +77,10 @@
                                             <button type="submit" value="{{ event.slug }}"
                                                 class="btn btn-warning">Cancel</button>
                                             {% else %}
+                                            {% if event.spots > 0 %}
                                             <button type="submit" value="{{ event.slug }}"
                                                 class="btn btn-success">Join</button>
+                                            {% endif %}
                                             {% endif %}
                                         </form>
                                         {% endif %}
@@ -124,5 +126,4 @@
                 {% endfor %}
             </div>
         </div>
-
         {%endblock%}
