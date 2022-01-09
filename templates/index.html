@@ -6,7 +6,7 @@
         <h2 id="intro_title">Welcome {{ user.username }}!!</h2>
         <br>
         <p class="intro_text">
-            You are ready to start searching and signing up for your next event. 
+            You are ready to start searching and signing up for your next event.
         </p>
         <br>
         <p class="intro_text">
@@ -68,27 +68,23 @@
                                         <p><strong>organiser:</strong> {{ event.author }}</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
-                                        </button>
                                         {% if user.is_authenticated %}
+                                        {% if request.user != event.author %}
                                         <form action="{% url 'join_event' event.slug %}" method="POST">
                                             {% csrf_token %}
+                                            
                                             {% if request.user in event.signed_up.all %}
                                             <button type="submit" value="{{ event.slug }}"
-                                                class="btn btn-danger">Cancel</button>
+                                                class="btn btn-warning">Cancel</button>
                                             {% else %}
                                             <button type="submit" value="{{ event.slug }}"
-                                                class="btn btn-secondary">Join</button>
+                                                class="btn btn-success">Join</button>
                                             {% endif %}
                                         </form>
-                                        {% if request.user == event.author %}
-                                        <form action="{% url 'delete_event' event.slug %}" method="POST">
-                                            {% csrf_token %}
-                                            <button type="submit" value="{{ event.slug }}"
-                                                class="btn btn-danger">DELETE</button>
-                                        </form>
                                         {% endif %}
                                         {% endif %}
+                                        <button type="button" class="btn btn-info" data-dismiss="modal">Close
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -97,11 +93,8 @@
                             <h5 class="card-title">{{ event.title }}</h5>
                             <p class="card-text">{{ event.location }}</p>
                             <p class="card-text">{{ event.summary }}</p>
-                            <button type="button" class="btn btn-success" data-toggle="modal"
-                                data-target="#{{ event.slug }}">
-                                Details
-                            </button>
                             {% if user.is_authenticated %}
+                            {% if request.user != event.author %}
                             <form class="join_button" action="{% url 'join_event' event.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if request.user in event.signed_up.all %}
@@ -110,14 +103,18 @@
                                 <button type="submit" value="{{ event.slug }}" class="btn btn-success">Join</button>
                                 {% endif %}
                             </form>
+                            {% endif %}
                             {% if request.user == event.author %}
                             <form class="join_button" action="{% url 'delete_event' event.slug %}" method="POST">
                                 {% csrf_token %}
-                                <button type="submit" value="{{ event.slug }}"
-                                    class="btn btn-danger">Delete</button>
+                                <button type="submit" value="{{ event.slug }}" class="btn btn-danger">Delete</button>
                             </form>
                             {% endif %}
                             {% endif %}
+                            <button type="button" class="btn btn-info" data-toggle="modal"
+                                data-target="#{{ event.slug }}">
+                                Details
+                            </button>
                         </div>
                     </div>
                 </div>
