@@ -44,11 +44,10 @@ class JoinEvent(View):
         event = get_object_or_404(Event, slug=slug)
         if request.user in event.signed_up.all():
             event.signed_up.remove(request.user)
-            event.save()
             event.spots += 1
+            event.save()
         else:
             event.signed_up.add(request.user)
-            event.save()
             event.spots -= 1
+            event.save()
         return redirect('/')
-

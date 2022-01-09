@@ -77,19 +77,19 @@
                             <h5 class="card-title">{{ event.title }}</h5>
                             <p class="card-text">{{ event.location }}</p>
                             <p class="card-text">{{ event.summary }}</p>
-                            <button type="button" class="btn btn-outline-success" data-toggle="modal"
+                            <button type="button" class="btn btn-success" data-toggle="modal"
                                 data-target="#{{ event.slug }}">
                                 Details
                             </button>
                             {% if user.is_authenticated %}
-                            <form action="{% url 'join_event' event.slug %}" method="POST">
+                            <form class="join_button" action="{% url 'join_event' event.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if request.user in event.signed_up.all %}
                                 <button type="submit" value="{{ event.slug }}"
-                                    class="btn btn-outline-success">Cancel</button>
+                                    class="btn btn-success">Cancel</button>
                                 {% else %}
                                 <button type="submit" value="{{ event.slug }}"
-                                    class="btn btn-outline-success">Join</button>
+                                    class="btn btn-success">Join</button>
                                 {% endif %}
                             </form>
                             {% else %}
