@@ -7,6 +7,5 @@ from django_summernote.admin import SummernoteModelAdmin
 class PostAdmin(SummernoteModelAdmin):
 
     prepopulated_fields = {'slug': ('title',)}
-    summernote_fields = ('details', 'requirements')
     search_fields = ['title', 'details', 'requirements']
     list_filter = ('status', 'created_on', 'event_start')

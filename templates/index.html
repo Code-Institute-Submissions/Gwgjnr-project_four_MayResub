@@ -60,9 +60,9 @@
                                         <form action="{% url 'join_event' event.slug %}" method="POST">
                                             {% csrf_token %}
                                             {% if signed_up %}
-                                            <button type="submit" value="{{event.slug}}" class="btn btn-secondary">Cancel</button>
+                                            <button type="submit" value="{{ event.slug }}" class="btn btn-secondary">Cancel</button>
                                             {% else %}
-                                            <button type="submit" value="{{event.slug}}" class="btn btn-secondary">Join</button>
+                                            <button type="submit" value="{{ event.slug }}" class="btn btn-secondary">Join</button>
                                             {% endif %}
                                         </form>
                                         {% else %}

@@ -26,7 +26,4 @@ class Event(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return self.title
-
-    def number_of_sign_ups(self):
-        return self.signed_up.count()
+        return self.titles

@@ -47,5 +47,5 @@ class JoinEvent(View):
         else:
             event.signed_up.add(request.user)
             event.spots -= 1
-
         return redirect('/')
+
