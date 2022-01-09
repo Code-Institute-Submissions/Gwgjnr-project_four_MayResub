@@ -72,7 +72,7 @@
                                         {% if request.user != event.author %}
                                         <form action="{% url 'join_event' event.slug %}" method="POST">
                                             {% csrf_token %}
-                                            
+
                                             {% if request.user in event.signed_up.all %}
                                             <button type="submit" value="{{ event.slug }}"
                                                 class="btn btn-warning">Cancel</button>
@@ -91,6 +91,7 @@
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">{{ event.title }}</h5>
+                            <p class="card-text">Spaces: <strong>{{ event.spots }}</strong></p>
                             <p class="card-text">{{ event.location }}</p>
                             <p class="card-text">{{ event.summary }}</p>
                             {% if user.is_authenticated %}
@@ -100,7 +101,9 @@
                                 {% if request.user in event.signed_up.all %}
                                 <button type="submit" value="{{ event.slug }}" class="btn btn-warning">Cancel</button>
                                 {% else %}
+                                {% if event.spots > 0 %}
                                 <button type="submit" value="{{ event.slug }}" class="btn btn-success">Join</button>
+                                {% endif %}
                                 {% endif %}
                             </form>
                             {% endif %}
