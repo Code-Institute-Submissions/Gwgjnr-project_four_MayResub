@@ -4,6 +4,10 @@ h2, h3, h4, h5 {
     font-family: 'Ubuntu Mono', monospace;
 }
 
+.social-media a {
+    color: azure;
+}
+
 main p {
     font-family: 'Caveat', cursive;
     font-size: large;
