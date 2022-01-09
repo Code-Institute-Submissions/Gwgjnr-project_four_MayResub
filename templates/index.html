@@ -53,16 +53,17 @@
                                         <p><strong>organiser:</strong> {{ event.author }}</p>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
                                         </button>
                                         {% if user.is_authenticated %}
                                         <form action="{% url 'join_event' event.slug %}" method="POST">
                                             {% csrf_token %}
-                                            {% if signed_up %}
-                                            <button type="submit" value="{{ event.slug }}" class="btn btn-secondary">Cancel</button>
+                                            {% if request.user in event.signed_up.all %}
+                                            <button type="submit" value="{{ event.slug }}"
+                                                class="btn btn-secondary">Cancel</button>
                                             {% else %}
-                                            <button type="submit" value="{{ event.slug }}" class="btn btn-secondary">Join</button>
+                                            <button type="submit" value="{{ event.slug }}"
+                                                class="btn btn-secondary">Join</button>
                                             {% endif %}
                                         </form>
                                         {% else %}
@@ -80,7 +81,20 @@
                                 data-target="#{{ event.slug }}">
                                 Details
                             </button>
-                            <button class="btn btn-outline-success" type="info">Join</button>
+                            {% if user.is_authenticated %}
+                            <form action="{% url 'join_event' event.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if request.user in event.signed_up.all %}
+                                <button type="submit" value="{{ event.slug }}"
+                                    class="btn btn-outline-success">Cancel</button>
+                                {% else %}
+                                <button type="submit" value="{{ event.slug }}"
+                                    class="btn btn-outline-success">Join</button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span></span>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

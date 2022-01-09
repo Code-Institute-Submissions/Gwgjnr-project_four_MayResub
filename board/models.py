@@ -26,4 +26,4 @@ class Event(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return self.titles
+        return self.title
