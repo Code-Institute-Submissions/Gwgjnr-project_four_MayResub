@@ -13,19 +13,15 @@
     - [**Existing Features**](#existing-features)
     - [**Future Features**](#future-features)
 
-3. [**Technologies Used**](#technologies-used)
-    - [**Front-End Technologies**](#front-end-technologies)
-    - [**Back-End Technologies**](#back-end-technologies)
-
-4. [**Testing**](#testing)
+3. [**Testing**](#testing)
     - [**Validators**](#validators)
     - [**Known Issues**](#known-issues)
 
-5. [**Deployment**](#deployment)
+4. [**Deployment**](#deployment)
     - [**Heroku Deployment steps**](#heroku-deployment-steps)
     - [**Forking the GitHub Repository**](#forking-the-github-repository)
 
-6. [**Credits**](#credits)
+5. [**Credits**](#credits)
     - [**Content**](#content)
     - [**Acknowledgements**](#acknowledgements)
 
@@ -98,12 +94,6 @@ Event Form Page allows the user to post a new event to the site.
 
 * A search bar to allow the user to narrow down the events list.
 * An option for authors of a post to edit the post details once submitted.
-
-## Technologies Used
-
-### Front-End Technologies
-
-### Back-End Technologies
 
 ## Testing
 
