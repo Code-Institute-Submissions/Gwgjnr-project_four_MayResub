@@ -10,7 +10,7 @@ body {
 
 /* Styling to set fonts throughout website */
 
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
     font-family: 'Ubuntu Mono', monospace;
 }
 
@@ -49,7 +49,7 @@ main p {
 }
 
 .social-media a {
-    color: azure;
+    color: black;
 }
 
 /* Styling for cards on index.html */
@@ -73,6 +73,10 @@ main p {
 
 .join_button {
     display: inline;
+}
+
+.card button {
+    color: black;
 }
 
 /* Styling for intro section on index.html */

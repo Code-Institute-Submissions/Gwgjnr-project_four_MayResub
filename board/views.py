@@ -6,13 +6,19 @@ from datetime import datetime
 
 
 class EventList(generic.ListView):
+    '''
+    This view is used for generating the event list homepage.
+    '''  
     model = Event
     queryset = Event.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
 
 
 class CreateEvent(View):
-
+    '''
+    This view is used for generating the event_form page and saving the 
+    input to create a new event item.
+    '''
     def get(self, request, *args, **kwargs):
 
         return render(
@@ -38,7 +44,10 @@ class CreateEvent(View):
 
 
 class JoinEvent(View):
-    
+    '''
+    This view is used for joining or cancelling your spot at an event, it also 
+    updates the available spaces each time a user changes their status.
+    '''    
     def post(self, request, slug, *args, **kwargs):
         event = get_object_or_404(Event, slug=slug)
         if request.user in event.signed_up.all():
@@ -53,7 +62,9 @@ class JoinEvent(View):
 
 
 class DeleteEvent(View):
-    
+    '''
+    This view is used for deleting an event.
+    ''' 
     def post(self, request, slug, *args, **kwargs):
         event = get_object_or_404(Event, slug=slug)
         event.delete()
