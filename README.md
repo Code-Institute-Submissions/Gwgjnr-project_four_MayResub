@@ -22,8 +22,8 @@
     - [**Known Issues**](#known-issues)
 
 5. [**Deployment**](#deployment)
-    - [**Local Deployment**](#local-deployment)
-    - [**Remote Deployment**](#remote-deployment)
+    - [**Heroku Deployment steps**](#heroku-deployment-steps)
+    - [**Forking the GitHub Repository**](#forking-the-github-repository)
 
 6. [**Credits**](#credits)
     - [**Content**](#content)
@@ -60,9 +60,19 @@ When deciding on the design, I wanted to create an informal and inviting space t
   
 #### Color Scheme
 
+<img src="media/readme/palette.png">
+
+I selected the colours closest to the colours of post it notes for the event cards and then picked a warm colour for the nav and footer to frame the page. 
+
 #### Typography
 
+The Google Font of Caveat was first selected as tbe main font for this site as it gave the appearance of a hand written note on the cards which was in keeping with the informal design. I then selected Ubuntu Mono for the headers as I found this complimented Caveat.
+
+The Hobby Hub logo is the Google Font Permanent Marker which I felt was a very strong font that also met the design plan. 
+
 ### Wireframes
+
+<img src="media/readme/wireframe1.png">
 
 ## Features
 
@@ -82,10 +92,63 @@ When deciding on the design, I wanted to create an informal and inviting space t
 
 ### Known Issues
 
-## Deployment
+## Deployment 
 
-### Local Deployment
+### Heroku Deployment steps
+ 
+ 1. Ensure all dependencies are listed on requirements.txt. 
+ 
+ Write on python terminal ` pip3 freeze > requirements.txt`, and a list with all requirements will be created to be read by Heroku. 
+ 
+ 2. Setting up your Heroku
 
-### Remote Deployment
+    2.1 Go to Heroku website (https://www.heroku.com/). 
+    
+    2.2 Login to Heroku and go to Create App.
+    
+    2.3 Click in New and Create a new app.
+    
+    2.4 Choose a name and set your location.
+
+    2.5. Navigate to the Resources tab.
+
+    2.6. Click on Resources and Seach for Heroku Postgres and select it on the list.
+    
+    2.7. Navigate to the deploy tab.
+    
+    2.8. Click in Connect to Github and search for 'Gwgjnr' GitHub account and 'project_four' repository.
+    
+    2.9.  Navigate to the settings tab.
+    
+    2.10.  Click on Config Vars, and add your Cloudinary, Database URL (from Heroku-Postgres) and Secret key.
+
+ 3. Deployment on Heroku
+
+    3.1.  Navigate to the Deploy tab.
+        
+    3.2.  Choose the main branch to deploy and enable automatic deployment to build Heroku every time any changes are pushed on the repository.
+        
+    3.3 Click on manual deploy to build the App.  When complete, click on View to redirect to the live site. 
+    
+### Forking the GitHub Repository
+
+* By forking the GitHub Repository, you will be able to make a copy of the original repository on your own GitHub account, allowing you to view and/or make changes without affecting the original repository by using the following steps:
+
+    Log in to GitHub and locate the GitHub Repository
+    At the top of the Repository (not top of page), just above the "Settings" button on the menu, locate the "Fork" button.
+    You should now have a copy of the original repository in your GitHub account.
+
+* Making a Local Clone
+
+    Log in to GitHub and locate the GitHub Repository
+    Under the repository name, click "Clone or download".
+    To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+    Open Git Bash
+    Change the current working directory to the location where you want the cloned directory to be made.
+    Type git clone, and then paste the URL you copied in Step 3.
+
+$ git clone https://github.com/Gwgjnr/project_four
+
+Press Enter. Your local clone will be created.
 
 ## Credits
