@@ -60,8 +60,6 @@ When deciding on the design, I wanted to create an informal and inviting space t
   
 #### Color Scheme
 
-<img src="media/readme/palette.png">
-
 I selected the colours closest to the colours of post it notes for the event cards and then picked a warm colour for the nav and footer to frame the page. 
 
 #### Typography
@@ -72,13 +70,34 @@ The Hobby Hub logo is the Google Font Permanent Marker which I felt was a very s
 
 ### Wireframes
 
-<img src="media/readme/wireframe1.png">
-
 ## Features
+
+**Navbar**
+
+Navbar set at top of each page to allow the user to easily navigate the site. Made collapsible with Bootstrap to allow a better format for mobile users.
+
+**Event List Page**
 
 ### Existing Features
 
+Event List displays all events ordered by the publishing date and gives the options to interact with the events listed.
+
+* All events contain a details button so users can see more information about an event. Clicking this button opens a modal containing all information.
+* A join button is displayed when a user is signed in and is not the author of the event, this button is hidden is the spots number reaches zero. Clicking this button also reduces the number of spots by one.
+* A cancel button is displayed if the user has joined the event. This changes the boolean status of the user attending the event and increases the event spots number by one.
+* A delete button is only visible on the card if you are the author of the event.
+
+**Event Form Page**
+
+Event Form Page allows the user to post a new event to the site.
+
+* Created using Crispy Form for styling.
+* Formatted with Bootstrap rows and columns to allow it to be responsive for mobile and computer screens. 
+
 ### Future Features
+
+* A search bar to allow the user to narrow down the events list.
+* An option for authors of a post to edit the post details once submitted.
 
 ## Technologies Used
 
