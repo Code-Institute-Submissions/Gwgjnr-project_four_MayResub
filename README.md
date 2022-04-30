@@ -1,6 +1,6 @@
 # [Hobby Hub](https://noticeboard2021.herokuapp.com/)
 
-![Mockup of live site on different devices](https://github.com/Gwgjnr/project_four/tree/main/media/readme/mockup_p4.JPG)
+![Mockup of live site on different devices](media/readme/mockup_p4.JPG)
 
 ## Table of Contents
 1. [**UX**](#ux)
@@ -58,6 +58,8 @@ When deciding on the design, I wanted to create an informal and inviting space t
   
 #### Color Scheme
 
+![Colour Palette](media/readme/Palette2.JPG)
+
 I selected the colours closest to the colours of post it notes for the event cards and then picked a warm colour for the nav and footer to frame the page. 
 
 #### Typography
@@ -67,6 +69,14 @@ The Google Font of Caveat was first selected as tbe main font for this site as i
 The Hobby Hub logo is the Google Font Permanent Marker which I felt was a very strong font that also met the design plan. 
 
 ### Wireframes
+
+Main page wireframe
+
+![Main page wireframe](media/readme/wireframemainpage.JPG)
+
+Mobile main page wireframe
+
+![Mobile main page wireframe](media/readme/mobilemockup.JPG)
 
 ## Features
 
