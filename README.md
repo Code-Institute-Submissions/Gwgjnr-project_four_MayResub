@@ -1,5 +1,7 @@
 # [Hobby Hub](https://noticeboard2021.herokuapp.com/)
 
+![Mockup of live site on different devices](https://github.com/Gwgjnr/project_four/tree/main/media/readme/mockup_p4.JPG)
+
 ## Table of Contents
 1. [**UX**](#ux)
     - [**User Stories**](#user-stories)
