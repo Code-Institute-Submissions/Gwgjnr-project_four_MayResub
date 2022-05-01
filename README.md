@@ -9,6 +9,7 @@
         - [**Framework**](#framework)
         - [**Color Scheme**](#color-scheme)
         - [**Typography**](#typography)
+        - [**Data Model**](#data-model)
     - [**Wireframes**](#wireframes)
 
 2. [**Features**](#features)
@@ -68,6 +69,11 @@ The Google Font of Caveat was first selected as tbe main font for this site as i
 
 The Hobby Hub logo is the Google Font Permanent Marker which I felt was a very strong font that also met the design plan. 
 
+#### Data Model
+
+
+![Data Model](media/readme/p4datamodel.JPG)
+
 ### Wireframes
 
 Main page wireframe
@@ -82,9 +88,13 @@ Mobile main page wireframe
 
 **Navbar**
 
+![Navbar](media/readme/navbar.JPG)
+
 Navbar set at top of each page to allow the user to easily navigate the site. Made collapsible with Bootstrap to allow a better format for mobile users.
 
 **Event List Page**
+
+![Event List Page](media/readme/events.JPG)
 
 ### Existing Features
 
@@ -97,6 +107,8 @@ Event List displays all events ordered by the publishing date and gives the opti
 
 **Event Form Page**
 
+![Event Form Page](media/readme/formpage.JPG)
+
 Event Form Page allows the user to post a new event to the site.
 
 * Created using Crispy Form for styling.
@@ -108,6 +120,76 @@ Event Form Page allows the user to post a new event to the site.
 * An option for authors of a post to edit the post details once submitted.
 
 ## Testing
+
+I have thoroughly tested the features of Hobby Hub web application againt all user stories, I have also tested the web app on different screen sizes using google developer tools to ensure it is responsive for mobile and desktop devices.
+
+USER STORY: Draft Events
+
+<i>As a admin I can create an event and save it so that I can return and update details before posting on site.</i>
+
+* I tested this user story by accessing and editing all details on a post once created through django admin. I was able to create events the admin panel and also through the web app once logged in.
+
+Conclusion: Passed
+
+---
+
+USER STORY: Navbar and footer template
+
+<i>As a user I can easily navigate to internal and external links so that I can login/logout and view external social media pages.</i>
+
+* I have tested this user story by clicking all links in all features of the site to ensure they function as intended. The links are clearly labelled so the user can quickly understand each link's purpose. 
+
+Conclusion: Passed
+
+---
+
+USER STORY: View number of spots available
+
+<i>As a User I can view the number of spots left at an event so that I can see if it is popular and whether the event has enough space for a group to sign up.</i>
+
+* I have tested this user story by ensuring each event displays the number of spots available. When an event is joined the number of spots decreased by one and increases by one when you cancel. I have also tested to ensure the join button is not available unless there is spaces available.
+
+Conclusion: Passed
+
+---
+
+USER STORY:
+
+<i></i>
+
+
+
+Conclusion:
+
+---
+
+USER STORY:
+
+<i></i>
+
+
+
+Conclusion:
+
+---
+
+USER STORY:
+
+<i></i>
+
+
+
+Conclusion:
+
+---
+
+USER STORY:
+
+<i></i>
+
+
+
+Conclusion:
 
 ### Validators
 
