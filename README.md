@@ -18,6 +18,9 @@
 
 3. [**Testing**](#testing)
     - [**Validators**](#validators)
+    - [**Responsive Testing**](#responsive-testing)
+
+    
 
 4. [**Deployment**](#deployment)
     - [**Heroku Deployment steps**](#heroku-deployment-steps)
@@ -122,13 +125,13 @@ Event Form Page allows the user to post a new event to the site.
 
 ### Validators
 
-I have thoroughly tested the features of Hobby Hub web application againt all user stories, I have also tested the web app on different screen sizes using google developer tools to ensure it is responsive for mobile and desktop devices.
+I have thoroughly tested the features of Hobby Hub web application against all user stories.
 
 USER STORY: Draft Events
 
 <i>As a admin I can create an event and save it so that I can return and update details before posting on site.</i>
 
-* I tested this user story by accessing and editing all details on a post once created through django admin. I was able to create events the admin panel and also through the web app once logged in.
+* I tested this user story by accessing and editing all details on a post once created through Django Admin. I was able to create events in the admin panel and edit all details on previously created events.
 
 Conclusion: Passed
 
@@ -178,7 +181,7 @@ USER STORY: Post Events
 
 <i>As a user I can create an event so that I can organise a group in advance for my activity.</i>
 
-* The form page is clearly labelled in the nav bar and intro text once logged in, I have created events through the form to ensure they are posted to the event list.
+* The form page is clearly labelled in the nav bar and intro text box once logged in, I have created events through the form to ensure they are posted to the event list.
 
 Conclusion: Passed
 
@@ -191,6 +194,14 @@ USER STORY: Event Registration
 * Once logged in I was able to click to attend an event which would decrease the spots available. I can also click to cancel my spot in the same place. 
 
 Conclusion: Passed
+
+### Responsive Testing
+
+I have tested all the pages of the web app on different screen sizes using google developer tools to ensure it is responsive for mobile and desktop devices.
+
+Mobile and Tablet View
+
+![Mobile View](media/readme/mobileview.JPG) ![Table View](media/readme/tablet.JPG)
 
 ## Deployment 
 
@@ -252,3 +263,5 @@ $ git clone https://github.com/Gwgjnr/project_four
 Press Enter. Your local clone will be created.
 
 ## Credits
+
+I would like to thank my mentor Daisy Mc Girr for her patience and guidance on this project.
