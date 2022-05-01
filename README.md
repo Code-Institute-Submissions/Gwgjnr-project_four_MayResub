@@ -18,7 +18,6 @@
 
 3. [**Testing**](#testing)
     - [**Validators**](#validators)
-    - [**Known Issues**](#known-issues)
 
 4. [**Deployment**](#deployment)
     - [**Heroku Deployment steps**](#heroku-deployment-steps)
@@ -121,6 +120,8 @@ Event Form Page allows the user to post a new event to the site.
 
 ## Testing
 
+### Validators
+
 I have thoroughly tested the features of Hobby Hub web application againt all user stories, I have also tested the web app on different screen sizes using google developer tools to ensure it is responsive for mobile and desktop devices.
 
 USER STORY: Draft Events
@@ -153,47 +154,43 @@ Conclusion: Passed
 
 ---
 
-USER STORY:
+USER STORY: View posts
 
-<i></i>
+<i>As a User I can navigate through events with spaces available so that I may find an activity that interests me.</i>
 
+* Each event is clearly displayed in their own card on the main page of the site. Each card gives a summary and can clicked for a modal containing further details.
 
-
-Conclusion:
-
----
-
-USER STORY:
-
-<i></i>
-
-
-
-Conclusion:
+Conclusion: Passed
 
 ---
 
-USER STORY:
+USER STORY: Sign into an account
 
-<i></i>
+<i>As a User I can sign into my account so that I can register for events.</i>
 
+* I have tested this user story by creating a number of different accounts and then using them to create and register for events.
 
-
-Conclusion:
+Conclusion: Passed
 
 ---
 
-USER STORY:
+USER STORY: Post Events
 
-<i></i>
+<i>As a user I can create an event so that I can organise a group in advance for my activity.</i>
 
+* The form page is clearly labelled in the nav bar and intro text once logged in, I have created events through the form to ensure they are posted to the event list.
 
+Conclusion: Passed
 
-Conclusion:
+---
 
-### Validators
+USER STORY: Event Registration
 
-### Known Issues
+<i>As a User I can register for available events so that the organiser is aware of my plans to attend.</i>
+
+* Once logged in I was able to click to attend an event which would decrease the spots available. I can also click to cancel my spot in the same place. 
+
+Conclusion: Passed
 
 ## Deployment 
 
